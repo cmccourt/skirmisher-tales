@@ -1,0 +1,43 @@
+tree("Deploy Units")
+	sequence
+		CompareUnits
+		ChangeAttackState
+		SetIdle(false)
+		fallback
+			tree("Critical")
+			tree("Cautious")
+			tree("Peaceful")
+
+		
+tree("Critical")
+	sequence
+		IsState("critical")
+		SetIdle(false)
+		while IsState("critical")
+			sequence
+				mute DeployUnit
+				CompareUnits
+				ChangeAttackState
+				
+		
+					
+tree("Cautious")
+	sequence
+		IsState("cautious")
+		SetIdle(false)
+		while IsState("cautious")
+			sequence
+				Random(80,20)
+					DeployUnit
+					DeploySpecialUnit
+				CompareUnits
+				ChangeAttackState
+				
+			
+tree("Peaceful")
+	sequence
+		IsState("peaceful")
+		SetIdle(true)
+		
+
+

@@ -1,0 +1,33 @@
+tree("Alive")
+	fallback
+		tree("LevelComplete")
+		tree("Attack")
+		tree("Move")
+
+tree("Attack")
+	while
+		sequence
+			EnemyInRange
+			not IsFrozen
+		fallback
+			UnitOnCooldown
+			sequence
+				StopMoving
+				Attack
+			
+
+tree("Move")
+	while
+		sequence
+			not IsStationary
+			not EnemyInRange
+			not IsFrozen
+		sequence
+			SetDestination
+			MoveToDestination
+			ReachedDestination
+		
+			
+			
+		
+			

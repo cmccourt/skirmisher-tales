@@ -1,0 +1,13 @@
+castle-icon-4.jpg : http://chittagongit.com//images/castle-icon/castle-icon-4.jpg
+
+tower-logo : https://static.thenounproject.com/png/2478-200.png
+
+flag-vector : https://static.vecteezy.com/system/resources/previews/000/104/526/non_2x/flag-vector-icon-set.jpg
+
+Sign Post : https://img.freepik.com/free-vector/wooden-signs_23-2147517393.jpg?size=338&ext=jpg
+
+Cross-hair : https://dl2.macupdate.com/images/icons128/11396.png?d=1475850134
+
+Lightning Icon: https://cdn.pixabay.com/photo/2014/04/02/11/12/lightning-305555__340.png
+
+2D Forest Pack with 9-slicing sprites folder - https://www.behance.net/gallery/58615601/2D-Forest-Pack-with-9-slicing-sprites

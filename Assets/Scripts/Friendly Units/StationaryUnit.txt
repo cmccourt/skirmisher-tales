@@ -1,0 +1,16 @@
+tree("Alive")
+	fallback
+		tree("LevelComplete")
+		tree("Attack")
+
+
+tree("Attack")
+	while
+		sequence
+			EnemyInRange
+			not IsFrozen
+		fallback
+			UnitOnCooldown
+			Attack
+
+

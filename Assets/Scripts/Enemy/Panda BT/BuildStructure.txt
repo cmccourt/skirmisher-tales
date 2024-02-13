@@ -1,0 +1,12 @@
+tree("Build Structure")
+	while 
+		CheckPlots
+		sequence
+			SetIdle(false)
+			Random(70,30)
+				BuildStructure("Gold")
+				BuildStructure("Orb")
+				
+					
+
+

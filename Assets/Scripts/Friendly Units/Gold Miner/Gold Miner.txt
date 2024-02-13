@@ -1,0 +1,32 @@
+tree("Alive")
+	fallback 
+		tree("LevelComplete")
+		tree("Attack")
+		tree("CompleteDuty")
+
+tree("CompleteDuty")
+	fallback
+		sequence
+			HasResource
+			fallback
+				tree("ReturnToBase")
+				mute DepositResource
+		sequence
+			SetDestination("resource")
+			sequence
+				Wait(2.5)
+				fallback
+					while not ReachedDestination
+						MoveToDestination
+					CollectResource
+		while FindResourceStructure
+			sequence
+				tree("ReturnToBase")
+				StopMoving
+
+tree("ReturnToBase")
+	sequence
+		SetDestination("base")
+		Wait(2.5)
+		while not ReachedDestination
+			MoveToDestination

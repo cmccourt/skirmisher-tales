@@ -1,0 +1,14 @@
+tree("Root")
+	parallel
+		tree("Alive")
+		tree("Die")
+
+tree("Die")
+	sequence
+		IsHealthLessThan(0.1)
+		Die
+
+tree("LevelComplete")
+	sequence
+		IsLevelComplete
+		StopMoving
